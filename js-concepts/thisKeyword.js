@@ -85,3 +85,21 @@ const obj2 = {
 importantPerson(); // undefined ! - but should be Mayte !
 obj1.importantPerson(); // Majito !
 obj2.importantPerson(); // Maria !
+
+// ---------------------------- MODIFYING AN OBJECT WITH A METHOD WITH MULTPLE PARAMETERS ---------------------------- //
+const knight = {
+  name: "Juggernaut",
+  health: 150,
+  damage: 40,
+  madness(selfDmg, extraDmg) {
+    return (
+      (this.health = this.health - selfDmg),
+      (this.damage = this.damage + extraDmg)
+    );
+  }
+};
+
+// METHODS WITH ARGUMENTS
+console.log("prev", knight); // prev {name: "Juggernaut", health: 150, damage: 40, madness: ƒ}
+knight.madness(40, 200);
+console.log("new", knight); // new {name: "Juggernaut", health: 110, damage: 240, madness: ƒ}
