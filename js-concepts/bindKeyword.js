@@ -4,6 +4,7 @@
 
 // --------- WHY IS USEFEUL? --------- //
 // It's main benefit for us is because it allow to return a new function to call later on, with certain context or certain this keyword
+// Currying
 
 // ------------ BASIC EXAMPLE (FOR ME) ------------ //
 
